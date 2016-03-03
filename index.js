@@ -25,6 +25,6 @@ exports.handler = function(event, context) {
   }
 
   //context.succeed(phoneNumber);
-  context.succeed(gPhoneNumber);
-  return gPhoneNumber;
+  context.succeed((gPhoneNumber || event.phoneNumber));
+  return (gPhoneNumber || event.phoneNumber);
 }
