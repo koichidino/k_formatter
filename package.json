@@ -1,5 +1,5 @@
 {
-  "name": "phone-formater",
+  "name": "k_formatter",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/koichidino/phone-formater.git"
+    "url": "git+https://github.com/koichidino/k_formatter.git"
   },
   "author": "kay",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/koichidino/phone-formater/issues"
+    "url": "https://github.com/koichidino/k_formatter/issues"
   },
-  "homepage": "https://github.com/koichidino/phone-formater#readme",
+  "homepage": "https://github.com/koichidino/k_formatter#readme",
   "dependencies": {
     "google-libphonenumber": "^1.0.14"
-  }
+  },
+  "devDependencies": {}
 }
