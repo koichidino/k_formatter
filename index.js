@@ -26,7 +26,7 @@ exports.handler = function(event, context) {
           (PNF[event.formatter] ? PNF[event.formatter] : PNF.E164)));
   } else {
     // Print number in the international format.
-    var gPhoneNumber = (phoneUtil.format(phoneNumber, PNF.INTERNATIONAL));
+    var gPhoneNumber = (phoneUtil.format(phoneNumber, PNF.E164));
     // => +1 202-456-1414
   }
 
