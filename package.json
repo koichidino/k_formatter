@@ -1,0 +1,25 @@
+{
+  "name": "phone-formater",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koichidino/phone-formater.git"
+  },
+  "author": "kay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koichidino/phone-formater/issues"
+  },
+  "homepage": "https://github.com/koichidino/phone-formater#readme",
+  "dependencies": {
+    "google-libphonenumber": "^1.0.14"
+  }
+}
