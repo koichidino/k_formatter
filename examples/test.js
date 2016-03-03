@@ -11,6 +11,7 @@ callback.fail = function(err) {
   console.error(err.message);
 }
 
+console.log(formatter.handler('+8860921185084'));
 formatter.handler({
   phoneNumber: '886921185084',
   formatter: 'E164', // NATIONAL | E164 | INTERNATIONAL

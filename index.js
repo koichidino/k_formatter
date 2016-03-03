@@ -5,8 +5,14 @@ var PNF = require('google-libphonenumber').PhoneNumberFormat;
 var phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance();
 
 exports.handler = function(event, context) {
+  if (typeof event === 'string') {
+    event = { phoneNumber: event };
+  }
+
   if (!event.phoneNumber) {
-    context.fail(new Error('Missing phoneNumber'));
+    if (context && typeof context.fail === 'function') {
+      context.fail(new Error('Missing phoneNumber'));
+    }
     return;
   }
 
@@ -17,14 +23,15 @@ exports.handler = function(event, context) {
   if (event.formatter) {
 
     var gPhoneNumber = (phoneUtil.format(phoneNumber,
-          (PNF[event.formatter] ? PNF[event.formatter] : PNF.INTERNATIONAL)));
+          (PNF[event.formatter] ? PNF[event.formatter] : PNF.E164)));
   } else {
     // Print number in the international format.
     var gPhoneNumber = (phoneUtil.format(phoneNumber, PNF.INTERNATIONAL));
     // => +1 202-456-1414
   }
 
-  //context.succeed(phoneNumber);
-  context.succeed((gPhoneNumber || event.phoneNumber));
+  if (context && typeof context.succeed === 'function') {
+    context.succeed((gPhoneNumber || event.phoneNumber));
+  }
   return (gPhoneNumber || event.phoneNumber);
 }
