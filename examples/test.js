@@ -39,3 +39,8 @@ console.log('direct: ' + formatter.handler({
   phoneNumber: '+8613473193861',
   formatter: 'NATIONAL' // NATIONAL | E164 | INTERNATIONAL
 }, callback));
+
+console.log('direct: ' + formatter.handler({
+  phoneNumber: '+8613473193861',
+  formatter: 'INTERNATIONAL' // NATIONAL | E164 | INTERNATIONAL
+}, callback));

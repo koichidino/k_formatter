@@ -18,7 +18,7 @@ exports.handler = function(event, context) {
 
   // Parse number with country code.
   //var phoneNumber = phoneUtil.parse(event.phoneNumber);
-  var phoneNumber = phoneUtil.parse(event.phoneNumber, (event.countryCode ? event.countryCode : null));
+  var phoneNumber = phoneUtil.parse(event.phoneNumber, (event.countryCode ? event.countryCode : 'TW'));
 
   if (event.formatter) {
 
