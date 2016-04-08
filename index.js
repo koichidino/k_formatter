@@ -9,6 +9,13 @@ exports.handler = function(event, context) {
     event = { phoneNumber: event };
   }
 
+  if (!event) {
+    if (context && typeof context.fail === 'function') {
+      context.fail(new Error('Missing parameters'));
+    }
+    return;
+  }
+
   if (!event.phoneNumber) {
     if (context && typeof context.fail === 'function') {
       context.fail(new Error('Missing phoneNumber'));
