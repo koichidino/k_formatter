@@ -11,9 +11,9 @@ callback.fail = function(err) {
   console.error(err.message);
 }
 
-console.log(formatter.handler('+8860921185084'));
+console.log(formatter.handler('+8860912345687'));
 formatter.handler({
-  phoneNumber: '886921185084',
+  phoneNumber: '886912345687',
   formatter: 'E164', // NATIONAL | E164 | INTERNATIONAL
   countryCode: 'TW'
 }, callback)
@@ -25,7 +25,7 @@ formatter.handler({
 }, callback)
 
 formatter.handler({
-  phoneNumber: '+8860921185084',
+  phoneNumber: '+8860912345687',
   formatter: 'NATIONAL' // NATIONAL | E164 | INTERNATIONAL
 }, callback)
 
